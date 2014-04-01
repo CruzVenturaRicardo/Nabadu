@@ -1,0 +1,189 @@
+*{
+    margin:0;
+    padding:0;	/*Relleno; seoparaci�n del borde*/
+
+}
+
+body{
+    background: #74BDD7 url(../img/fondo.png); /*los colores se definen en hexadecimal, el # es importante*/
+    color: #001818; /*Color de las letras*/
+    font-family: 'Sonsie One', cursive;
+    /*font-family: "Chalet",Helvetica,Verdana; /* Fuentes no seguras entre comillas (es decir las que no estan en todos los sistemas)*/
+    font-size: .7em;
+}
+
+h1{
+    color: #353639;
+    font-size: 2em;
+    text-align:center;
+    text-shadow: 5px 5px 10px rgba(255,255,255,0.5); /* 4 parametros (x, y, bloor(borroso), transparencia )*/
+}
+
+h2{
+    color: #000;
+    font-size: 3.5em;
+}
+
+h3{
+    color: #fff;
+    font-size: 2em;
+}
+
+header, nav, footer{
+    border-radius: 0.5em; /* bordes de la caja se vuelvan curvos*/
+    margin: 0.1em 0.1em .01em 0.1em; /*Margen con respecto a lado izquierdo de la pantalla**/
+    max-width: 100%; /*Ancho maximo del area (header), todo depende del dispostivo, gracias a responsive-design*/
+    padding: 0.25em 0em 0.25em 0em;  /*separacion, del borde*/
+    text-align: center;
+}
+
+img#img1, #img2 {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    width: auto; 
+}
+section#contenedor{ /*contenedor*/
+    font-size: 1em;
+    margin: 0.5em auto;
+    max-width: 90%;
+    padding: 0; /*pendiente �?*/
+    text-align:center;
+    max-height: 100%;
+}
+
+article {
+    display: inline-block; /*como elemento en linea, lo que este despues del section, se comportara como bloque*/
+    margin: 0.25em auto;
+    padding: .25em;
+    text-align: center;
+    vertical-align: baseline; /*Para que se alinee de forma vertical en la parte de arriba*/
+    width: 45%;
+}
+
+section #t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8{ /*contenedor*/
+    font-family: 'Seymour One', sans-serif;
+    color: #fff;
+    /*background: #005C8A;*/
+    background-color: rgba(0,92,138,.3);
+    border-radius: 0.5em;
+    display: inline-block; /*como elemento en linea, lo que este despues del section, se comportara como bloque*/
+    margin: 0.25em auto;
+    max-width: 90%;
+    min-height: 20%; /*altura minima*/
+    max-height: 90%; /*altura minima*/
+    padding: .25em;
+    text-align: center;
+    vertical-align: top; /*Para que se alinee de forma vertical en la parte de arriba*/
+    width: 30%;
+}
+
+#t1:hover,#t2:hover,#t3:hover,#t4:hover,#t5:hover,#t6:hover,#t7:hover,#t8:hover {
+    background-color:white;
+    background-color: rgba(200,200,200,.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;           
+    cursor: pointer;
+}
+
+#t1:hover,#t2:hover,#t3:hover,#t4:hover,#t5:hover,#t6:hover,#t7:hover,#t8:hover, img {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}                              
+#t1:hover,#t2:hover,#t3:hover,#t4:hover,#t5:hover,#t6:hover,#t7:hover,#t8:hover, h2 {
+    color:#000;         
+}
+
+
+footer {
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    background: #4A4A4A;
+    vertical-align: text-bottom;
+}
+
+div {
+    text-align: center;
+}
+
+div img { 	
+    max-width: 12%;
+    height: auto;
+    max-height: 12%;
+    width: auto; 
+}
+
+#contenedor,#object, #t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8{
+    visibility: hidden;
+}
+
+#feed{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 15%;
+}
+
+#menu{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 15%;
+}
+
+
+#tweets li a img {
+    visibility: hidden;
+}
+
+#tweets li {
+    font-family: cursive;
+    background-color: rgba(0,92,138,.3);
+    border-radius: 0.5em;
+    margin: 0.25em auto;
+    max-width: 90%;
+    min-height: 20%;
+    max-height: 90%;
+    padding: .25em;
+    text-align: center;
+    vertical-align: top;
+    text-overflow: clip;
+}
+
+#tweets li:hover{
+   background-color:white;
+    background-color: rgba(200,200,200,.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;           
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+
+#tweets li a p {
+font-size: 170%;
+color: white;
+}
+
+#ver-tw{
+    font-family: cursive;
+background-color: rgba(0,92,138,.3);
+border-radius: 0.5em;
+margin: 0.25em auto;
+max-width: 90%;
+min-height: 20%;
+max-height: 90%;
+padding: .25em;
+text-align: center;
+vertical-align: top;
+text-overflow: clip;
+font-size: large;
+}
+
+.button{
+    
+}

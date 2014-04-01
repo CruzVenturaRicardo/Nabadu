@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hábitat</title>
+		<link rel="stylesheet" type="text/css" href="css/graficas.css">
+        <script src="js/jquery-1.11.0.min.js" ></script>
+        <script src="js/highcharts.js" ></script>
+        <script src="js/themes/grid.js" ></script>
+        <script src="js/graficas.js" ></script>
+
+    </head>
+    <body>
+        <select id="entidad">
+            <option value="ent">Entidad</option>
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="Baja California">Baja California</option>
+            <option value="Baja California Sur">Baja California Sur</option>
+            <option value="Campeche">Campeche</option>
+            <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+            <option value="Colima">Colima</option>
+            <option value="Chiapas">Chiapas</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Distrito Federal">Distrito Federal</option>
+            <option value="Durango">Durango</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Guerrero">Guerrero</option>
+            <option value="Hidalgo">Hidalgo</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="México">México</option>
+            <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+            <option value="Morelos">Morelos</option>
+            <option value="Nayarit">Nayarit</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Quintana Roo">Quintana Roo</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="Sinaloa">Sinaloa</option>
+            <option value="Sonora">Sonora</option>
+            <option value="Tabasco">Tabasco</option>
+            <option value="Tamaulipas">Tamaulipas</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
+            <option value="Yucatán">Yucatán</option>
+            <option value="Zacatecas">Zacatecas</option>
+            <option value="República Mexicana">República Mexicana</option>
+        </select>
+
+        <select id="anio">
+            <option value="all">All</option>
+        </select>
+		<select id="dominio">
+			<option value="1">% de la poblacion de 0 a 17 en hogares con hacinamiento</option>
+			<option value="2">% de poblacion de 0 a 17 en hogares sin agua dentro de vivienda</option>
+			<option value="3">% de pob de 0 a 17 en hogares sin drenaje</option>
+			<option value="4">% de la poblacion de 12 a 14 no soltera</option>
+			<option value="5">% de la poblacion de 0 a 17 en hogares sin energia electrica</option>
+			<option value="6">% de la poblacion de 0 a 17 en hogares con piso de tierra</option>
+			<option value="7">Poblacion de 12 a 17 en hogares unipersonales</option>
+		</select>
+	    <button id="enviar">Enviar</button>
+        <div id="resultados"></div>
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        <script> 
+            $('#enviar').on("click" , function(){
+				var api= "\""+"f2bc328f-7768-4824-b5af-01a7f60a4a5e"+"\"";
+				 var a= "año";
+                getData(api,a);
+			});
+			$('#entidad').change(function(){
+				var api= "\""+"f2bc328f-7768-4824-b5af-01a7f60a4a5e"+"\"";
+				 var a= "año";
+                llenar(api,a);
+			});		
+        </script>
+    </body>
+</html>  
+

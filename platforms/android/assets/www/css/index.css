@@ -1,0 +1,6 @@
+/* Some tablets mis-report orientation, leaving white at bottom: */
+
+.hide{
+    visibility: false;
+    display: none;
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ciudadanía</title>
+		<link rel="stylesheet" type="text/css" href="css/graficas.css">
+        <script src="js/jquery-1.11.0.min.js" ></script>
+        <script src="js/highcharts.js" ></script>
+        <script src="js/themes/grid.js" ></script>
+        <script src="js/graficas.js" ></script>
+
+    </head>
+    <body>
+        <select id="entidad">
+            <option value="ent">Entidad</option>
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="Baja California">Baja California</option>
+            <option value="Baja California Sur">Baja California Sur</option>
+            <option value="Campeche">Campeche</option>
+            <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+            <option value="Colima">Colima</option>
+            <option value="Chiapas">Chiapas</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Distrito Federal">Distrito Federal</option>
+            <option value="Durango">Durango</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Guerrero">Guerrero</option>
+            <option value="Hidalgo">Hidalgo</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="México">México</option>
+            <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+            <option value="Morelos">Morelos</option>
+            <option value="Nayarit">Nayarit</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Quintana Roo">Quintana Roo</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="Sinaloa">Sinaloa</option>
+            <option value="Sonora">Sonora</option>
+            <option value="Tabasco">Tabasco</option>
+            <option value="Tamaulipas">Tamaulipas</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
+            <option value="Yucatán">Yucatán</option>
+            <option value="Zacatecas">Zacatecas</option>
+            <option value="República Mexicana">República Mexicana</option>
+        </select>
+
+        <select id="anio">
+            <option value="all">All</option>
+        </select>
+	
+		<select id="dominio">
+			<option value="1">Registros de Nacimiento de poblacion menor de 1 año</option>
+			<option value="2">% de registro de nacimientos de la poblacion menor de 1 año</option>
+			<option value="3">TR de Nacimiento de población menor de 1 año Niños</option>
+			<option value="4">% de registro de nac de la pob menor de 1 año niños</option>
+			<option value="5">TR de Nacimiento de poblacion menor de 1 año Niñas</option>
+			<option value="6">% de registro de nac de la poblacion menor de 1 año niñas</option>
+			<option value="7">% de subregistro acumulado a 10 años</option>
+			<option value="8">% de subregistro acumulado a 10 años Niños</option>
+			<option value="9">% de subregistro acumulado a 10 años Niñas</option>
+			<option value="10">% de subregistro acumulado a 5 años</option>
+			<option value="11">% de subregistro acumulado a 5 años Niños</option>
+			<option value="12">% de subregistro acumulado a 5 años Niñas</option>
+			<option value="13">% de subregistro acumulado a 1 año</option>
+			<option value="14">% de subregistro acumulado a 1 años Niño</option>
+			<option value="15">% de subregistro acumulado a 1 año Niñas</option>
+		</select>
+	
+	<button id="enviar">Enviar</button>
+         <script>
+          $('#enviar').on("click" , function(){
+				var api="\""+"a1f77c6b-d20c-4107-8315-0f559d2eb486"+"\"";
+                var a= "Año";
+				getData(api,a);
+			});
+			$('#entidad').change(function(){
+				var api="\""+"a1f77c6b-d20c-4107-8315-0f559d2eb486"+"\"";
+                var a= "Año";
+				llenar(api,a);
+			});
+        </script>
+		<div id="resultados"></div>
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+       
+    </body>
+</html>  

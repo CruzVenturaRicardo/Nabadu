@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Salud</title>
+		<link rel="stylesheet" type="text/css" href="css/graficas.css">
+        <script src="js/jquery-1.11.0.min.js" ></script>
+        <script src="js/highcharts.js" ></script>
+        <script src="js/themes/grid.js" ></script>
+        <script src="js/graficas.js" ></script>
+
+    </head>
+    <body>
+        <select id="entidad">
+            <option value="ent">Entidad</option>
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="Baja California">Baja California</option>
+            <option value="Baja California Sur">Baja California Sur</option>
+            <option value="Campeche">Campeche</option>
+            <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+            <option value="Colima">Colima</option>
+            <option value="Chiapas">Chiapas</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Distrito Federal">Distrito Federal</option>
+            <option value="Durango">Durango</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Guerrero">Guerrero</option>
+            <option value="Hidalgo">Hidalgo</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="México">México</option>
+            <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+            <option value="Morelos">Morelos</option>
+            <option value="Nayarit">Nayarit</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Quintana Roo">Quintana Roo</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="Sinaloa">Sinaloa</option>
+            <option value="Sonora">Sonora</option>
+            <option value="Tabasco">Tabasco</option>
+            <option value="Tamaulipas">Tamaulipas</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
+            <option value="Yucatán">Yucatán</option>
+            <option value="Zacatecas">Zacatecas</option>
+            <option value="República Mexicana">República Mexicana</option>
+        </select>
+
+        <select id="anio">
+            <option value="all">All</option>
+        </select>
+	    <select id="dominio">
+			<option value="1">Mortalidad por enfermedad respiratoria de 0 a 4</option>
+			<option value="2">Tasa de mortalidad por enfermedad respiratoria de 0 a 4</option>
+			<option value="3">Mortalidad por enfermedad respiratoria en niños de 0 a 4</option>
+			<option value="4">Tasa de mortalidad por enfermedad respiratoria niños de 0 a 4</option>
+			<option value="5">Tasa de mortalidad por enferdad respiratoria en niñas de 0 a 4</option>
+			<option value="6">Tasa de mortalidad por asma en la poblacion de 0 a 4</option>
+			<option value="7">Madres de 10 años</option>
+			<option value="8">Madres de 10 a 14</option>
+			<option value="9">Madres de 15 a 17</option>
+			<option value="10">Tasa de maternidad de 10 a 14 por cada mil niñas</option>
+			<option value="11">Tasa de maternidad de 15 a 17 por cada mil niñas</option>
+			<option value="12">% de la poblacion de 0 a 4 atendida por desnutricion leve</option>
+			<option value="13">% de la poblacion de 0 a 4 atendida por desnutricion moderada</option>
+			<option value="14">% de la poblacion de 0 a 4 atendida por desnutricion grave</option>
+			<option value="15">Tasa de mortalidad infantil</option>
+			<option value="16">Porcentaje de la población de 0 a 17 sin derechohabiencia</option>
+			<option value="17">Porcentaje de la poblacion de 0 a 4 sin derechohabiencia</option>
+			<option value="18">Mortalidad por causa externa en la poblacion de 15 a 17</option>
+			<option value="19">Tasa de mortalidad por causa externa en la poblacion de 5 a 14</option>
+			<option value="20">Tasa de mortalidad por causa externa en la poblacion de 15 a 17</option>
+			</select>
+	  <button id="enviar" >Enviar</button>
+        <div id="resultados"></div>
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        <script> 
+$('#enviar').on("click" , function(){
+				var api= "\""+"f4230fab-7b36-4ea9-892e-baa7c3d38d26"+"\"";
+				var a= "Año";
+                getData(api,a);
+			});
+			$('#entidad').change(function(){
+				var api= "\""+"f4230fab-7b36-4ea9-892e-baa7c3d38d26"+"\"";
+				 var a= "Año";
+                llenar(api,a);
+			});		
+        </script>
+    </body>
+</html>  

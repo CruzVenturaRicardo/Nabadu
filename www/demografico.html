@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/graficas.css">
+        <script src="js/jquery-1.11.0.min.js" ></script>
+        <script src="js/highcharts.js" ></script>
+        <script src="js/themes/grid.js" ></script>
+        <script src="graficas.js" ></script>
+
+    </head>
+    <body>
+        <select id="entidad">
+			<option value="ent">Entidad</option>
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="Baja California">Baja California</option>
+            <option value="Baja California Sur">Baja California Sur</option>
+            <option value="Campeche">Campeche</option>
+            <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+            <option value="Colima">Colima</option>
+            <option value="Chiapas">Chiapas</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Distrito Federal">Distrito Federal</option>
+            <option value="Durango">Durango</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Guerrero">Guerrero</option>
+            <option value="Hidalgo">Hidalgo</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="México">México</option>
+            <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+            <option value="Morelos">Morelos</option>
+            <option value="Nayarit">Nayarit</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Quintana Roo">Quintana Roo</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="Sinaloa">Sinaloa</option>
+            <option value="Sonora">Sonora</option>
+            <option value="Tabasco">Tabasco</option>
+            <option value="Tamaulipas">Tamaulipas</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
+            <option value="Yucatán">Yucatán</option>
+            <option value="Zacatecas">Zacatecas</option>
+            <option value="República Mexicana">República Mexicana</option>
+        </select>
+
+        <select id="anio">
+            <option value="all">All</option>
+        </select>
+
+        <select id="dominio">
+            <option value="1">Población 0 a 17 años</option>
+            <option value="2">Población 0 a 4 años</option>
+            <option value="3">Población 5 a 9 años</option>
+            <option value="4">Población 10 a 14 años</option>
+            <option value="5">Población 15 a 17 años</option>
+            <option value="6">Niños 0 a 17 años
+            <option value="7">Niños 0 a 4 años</option>
+            <option value="8">Niños 5 a 9 años</option>
+            <option value="9">Niños 10 a 14 años</option>
+            <option value="10">Niños 15 a 17 años</option>
+            <option value="11">Niñas 0 a 17 años
+            <option value="12">Niñas 0 a 4 años</option>
+            <option value="13">Niñas 5 a 9 años</option>
+            <option value="14">Niñas 10 a 14 años</option>
+            <option value="15">Niñas 15 a 17 años</option>
+            <option value="16">Porcentaje de la población de 0 a 17 años</option>
+            <option value="17">Porcentaje de la población de 0 a 4 años</option>
+            <option value="18">Porcentaje de la población de 5 a 9 años</option>
+            <option value="19">Porcentaje de la población de 10 a 14 años</option>
+            <option value="20">Porcentaje de la población de 15 a 17 años</option>
+            <option value="21">Población de 0 a 17 en localidad rural</option>
+            <option value="22">Porcentaje de la población de 0 a 17 en localidad rural</option>
+            <option value="23">Población de 0 a 4 en localidad rural</option>
+            <option value="24">Porcentaje de la población de 0 a 4 en localidad rural</option>
+            <option value="25">Población de 5 a 9 en localidad rural</option>
+            <option value="26">Porcentaje de la población de 5 a 9 en localidad rural</option>
+            <option value="27">Población de 10 a 14 en localidad rural</option>
+            <option value="28">Porcentaje de la población de 10 a 14 en localidad rural</option>
+            <option value="29">Población de 14 a 17 en localidad rural</option>
+            <option value="30">Porcentaje de la población de 14 a 17 en localidad rural</option>
+            <option value="31">Población de 0 a 17 en localidad urbana</option>
+            <option value="32">Porcentaje de la población de 0 a 17 en localidad urbana</option>
+            <option value="33">Población de 0 a 4 en localidad urbana</option>
+            <option value="34">Porcentaje de la población de 0 a 4 en localidad urbana</option>
+            <option value="35">Población de 5 a 9 en localidad urbana</option>
+            <option value="36">Porcentaje de la población de 5 a 9 en localidad urbana</option>
+            <option value="37">Población de 10 a 14 en localidad urbana</option>
+            <option value="38">Porcentaje de la población de 10 a 14 en localidad urbana</option>
+            <option value="39">Población de 14 a 17 en localidad urbana</option>
+            <option value="40">Porcentaje de la población de 14 a 17 en localidad urbana</option>
+            <option value="41">Población de 0 a 9 años en hogares Nucleares</option>
+            <option value="42">Población de 0 a 9 años en hogares Ampliados</option>
+            <option value="43">Población de 0 a 9 años en hogares Compuestos</option>
+            <option value="44">Población de 0 a 9 años en hogares Corresidentes</option>
+            <option value="45">Población de 10 a 17 años en hogares Nucleares</option>
+            <option value="46">Población de 10 a 17 años en hogares Ampliados</option>
+            <option value="47">Población de 10 a 17 años en hogares Compuestos</option>
+            <option value="48">Población de 10 a 17 años en hogares Unipersonales</option>
+            <option value="49">Población de 10 a 17 años en hogares Corresidentes</option>
+            <option value="50">Población de habla indígena de 5 a 9 años</option>
+            <option value="51">Población de habla indígena de 10 a 14 años</option>
+            <option value="52">Población de habla indígena de 15 a 17 años</option>
+            <option value="53">Población de 0 a 4 años con discapacidad</option>
+            <option value="54">Población de 5 a 9 años con discapacidad</option>
+            <option value="55">Población de 10 a 14 años con discapacidad</option>
+            <option value="56">Población de 15 a 17 años con discapacidad</option>
+            <option value="57">Población de 0 a 17 años con discapacidad</option>
+            <option value="58">Población Total</option>
+        </select>
+
+
+        <button id="enviar">Enviar</button>
+			<script>
+			$('#enviar').on("click" , function(){
+				var api= "\""+"2804dd9b-9d30-4fcd-aee9-70a309013197"+"\"";
+                var a= "año";
+				getData(api,a);
+			});
+			$('#entidad').change(function(){
+				var api= "\""+"2804dd9b-9d30-4fcd-aee9-70a309013197"+"\"";
+                var a= "año";
+				llenar(api,a);
+			});
+			
+			</script>
+        <div id="resultados"></div>
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        <script>       
+        </script>
+    </body>
+</html>  

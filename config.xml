@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.xd.nabadu" version="0.0.1"
+ xmlns="http://www.w3.org/ns/widgets"
+ xmlns:cdv="http://cordova.apache.org/ns/1.0"
+xmlns:gap   = "http://phonegap.com/ns/1.0"
+>
+    <name>Nabadu</name>
+    <description>
+        Naba'du "volver a la infancia" una app para la infancia cuenta 
+    </description>
+    <author email="f.eli.x.lopez.aguirre@gmail.com" href="http://nabadu.bl.ee">
+        Un equipo de desarrollo fuera de lo normal
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+
+	<gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0" >
+	    <param name="APP_ID" value="266466096864616"/>
+	    <param name="APP_NAME" value="Nabadu"/>
+	</gap:plugin>
+
+	<feature name="org.apache.cordova.facebook.Connect">
+    <param name="android-package" value="org.apache.cordova.facebook.ConnectPlugin" />
+</feature>
+	
+</widget>

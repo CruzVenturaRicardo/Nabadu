@@ -1,0 +1,264 @@
+
+/*			*/
+.movimiento{
+  animation: animationFrames linear 4s;
+  animation-iteration-count: 1;
+  transform-origin: ;
+  -webkit-animation: animationFrames linear 4s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: ;
+  -moz-animation: animationFrames linear 4s;
+  -moz-animation-iteration-count: 1;
+  -moz-transform-origin: ;
+  -o-animation: animationFrames linear 4s;
+  -o-animation-iteration-count: 1;
+  -o-transform-origin: ;
+  -ms-animation: animationFrames linear 4s;
+  -ms-animation-iteration-count: 1;
+  -ms-transform-origin: ;
+}
+
+@keyframes animationFrames{
+  0% {
+    left:-21px;
+    top:117px;
+    opacity:1;
+    transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+  10% {
+    left:-137px;
+    top:55px;
+  }
+  20% {
+    left:-168px;
+    top:-27px;
+  }
+  30% {
+    left:-125px;
+    top:-114px;
+  }
+  40% {
+    left:-28px;
+    top:-168px;
+  }
+  50% {
+    left:107px;
+    top:-105px;
+  }
+  60% {
+    left:151px;
+    top:-26px;
+  }
+  70% {
+  }
+  80% {
+    left:-24px;
+    top:118px;
+  }
+  90% {
+    left:-27px;
+    top:-28px;
+  }
+  100% {
+    left:-27px;
+    top:-28px;
+    opacity:1;
+    transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+}
+
+@-moz-keyframes animationFrames{
+  0% {
+    left:-21px;
+    top:117px;
+    opacity:1;
+    -moz-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+  10% {
+    left:-137px;
+    top:55px;
+  }
+  20% {
+    left:-168px;
+    top:-27px;
+  }
+  30% {
+    left:-125px;
+    top:-114px;
+  }
+  40% {
+    left:-28px;
+    top:-168px;
+  }
+  50% {
+    left:107px;
+    top:-105px;
+  }
+  60% {
+    left:151px;
+    top:-26px;
+  }
+  70% {
+  }
+  80% {
+    left:-24px;
+    top:118px;
+  }
+  90% {
+    left:-27px;
+    top:-28px;
+  }
+  100% {
+    left:-27px;
+    top:-28px;
+    opacity:1;
+    -moz-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+}
+
+@-webkit-keyframes animationFrames {
+  0% {
+    left:-21px;
+    top:117px;
+    opacity:1;
+    -webkit-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+  10% {
+    left:-137px;
+    top:55px;
+  }
+  20% {
+    left:-168px;
+    top:-27px;
+  }
+  30% {
+    left:-125px;
+    top:-114px;
+  }
+  40% {
+    left:-28px;
+    top:-168px;
+  }
+  50% {
+    left:107px;
+    top:-105px;
+  }
+  60% {
+    left:151px;
+    top:-26px;
+  }
+  70% {
+  }
+  80% {
+    left:-24px;
+    top:118px;
+  }
+  90% {
+    left:-27px;
+    top:-28px;
+  }
+  100% {
+    left:-27px;
+    top:-28px;
+    opacity:1;
+    -webkit-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+}
+
+@-o-keyframes animationFrames {
+  0% {
+    left:-21px;
+    top:117px;
+    opacity:1;
+    -o-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+  10% {
+    left:-137px;
+    top:55px;
+  }
+  20% {
+    left:-168px;
+    top:-27px;
+  }
+  30% {
+    left:-125px;
+    top:-114px;
+  }
+  40% {
+    left:-28px;
+    top:-168px;
+  }
+  50% {
+    left:107px;
+    top:-105px;
+  }
+  60% {
+    left:151px;
+    top:-26px;
+  }
+  70% {
+  }
+  80% {
+    left:-24px;
+    top:118px;
+  }
+  90% {
+    left:-27px;
+    top:-28px;
+  }
+  100% {
+    left:-27px;
+    top:-28px;
+    opacity:1;
+    -o-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+}
+
+@-ms-keyframes animationFrames {
+  0% {
+    left:-21px;
+    top:117px;
+    opacity:1;
+    -ms-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+  10% {
+    left:-137px;
+    top:55px;
+  }
+  20% {
+    left:-168px;
+    top:-27px;
+  }
+  30% {
+    left:-125px;
+    top:-114px;
+  }
+  40% {
+    left:-28px;
+    top:-168px;
+  }
+  50% {
+    left:107px;
+    top:-105px;
+  }
+  60% {
+    left:151px;
+    top:-26px;
+  }
+  70% {
+  }
+  80% {
+    left:-24px;
+    top:118px;
+  }
+  90% {
+    left:-27px;
+    top:-28px;
+  }
+  100% {
+    left:-27px;
+    top:-28px;
+    opacity:1;
+    -ms-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+}

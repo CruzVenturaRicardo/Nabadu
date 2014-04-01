@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="">
+<title>Naba'du | Volver a la infancia</title>
+<link rel="stylesheet" type="text/css" href="css/animation.css" />
+<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+<link href='http://fonts.googleapis.com/css?family=Sonsie+One'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fredoka+One'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Seymour+One'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/index.css" />
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript" charset="utf-8"	src="js/jquery.tweet.min.js"></script>
+</head>
+<body>
+	<menu>
+		<a href="news.html"><img id="feed" src="img/feed.png"
+			title="noticias" /></a>
+		<a href="second.html" rel="external"><img id="menu"
+			src="img/menu.png" title="menu" /> </a>
+	</menu>
+
+	<section>
+		<article class="slideLeft">
+			<h2>NABA'DU</h2>
+		</article>
+		<article>
+			<img id="img2" src="img/logo_nabadu2.png">
+		</article>
+	</section>
+	<br>
+	<section id="contenedor">
+
+		<div id="twitter" style="visibility: visible; position: relative;">
+
+		</div>
+
+		<script>
+			var dem = $("#twitter").tweet({
+				modpath : 'http://nabadu.bl.ee/api/twitter/',
+				username : "infanciacuenta",
+				avatar_size : 80,
+				count : 10,
+				join_text : "",
+				auto_join_text_default : "",
+				auto_join_text_ed : "",
+				auto_join_text_ing : "",
+				auto_join_text_reply : "",
+				auto_join_text_url : "",
+				loading_text : "cargando tweets..."
+			});
+			load(event);
+
+		</script>
+
+
+		<div id="ver-tw">
+
+			<div id="content-ver-tw"></div>
+			<div id="social">
+				<a id="retweet" href="#" class="button"><img
+					src="img/retweet.png" /></a> 
+					<a id="reply" href="#" class="button"><img
+					src="img/repply.png" /></a> 
+					<a id="favorite" href="#" class="button"><img
+					src="img/star.png" /></a>
+
+			</div>
+		</div>
+	</section>
+	<br>
+	<footer> volver a la infancia | Naba´du </footer>
+</body>
+</html>

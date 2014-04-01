@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Seguridad</title>
+		<link rel="stylesheet" type="text/css" href="css/graficas.css">
+        <script src="js/jquery-1.11.0.min.js" ></script>
+        <script src="js/highcharts.js" ></script>
+        <script src="js/themes/grid.js" ></script>
+        <script src="js/graficas.js" ></script>
+
+    </head>
+    <body>
+        <select id="entidad">
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="Baja California">Baja California</option>
+            <option value="Baja California Sur">Baja California Sur</option>
+            <option value="Campeche">Campeche</option>
+            <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+            <option value="Colima">Colima</option>
+            <option value="Chiapas">Chiapas</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Distrito Federal">Distrito Federal</option>
+            <option value="Durango">Durango</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Guerrero">Guerrero</option>
+            <option value="Hidalgo">Hidalgo</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="México">México</option>
+            <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+            <option value="Morelos">Morelos</option>
+            <option value="Nayarit">Nayarit</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Quintana Roo">Quintana Roo</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="Sinaloa">Sinaloa</option>
+            <option value="Sonora">Sonora</option>
+            <option value="Tabasco">Tabasco</option>
+            <option value="Tamaulipas">Tamaulipas</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
+            <option value="Yucatán">Yucatán</option>
+            <option value="Zacatecas">Zacatecas</option>
+            <option value="República Mexicana">República Mexicana</option>
+        </select>
+        <select id="anio">
+            <option value="all">All</option>
+        </select>
+	    <select id="dominio">
+			<option value="1">Homicidio 0 a 4 años</option>
+			<option value="2">Homicidio 5 a 9 años</option>
+			<option value="3">Homicidio 10 a 14 años</option>
+			<option value="4">Homicidio 15 a 17 años</option>
+			<option value="5">Homicidio 0 a 17 años</option>
+			<option value="6">Tasa por homicidio 0 a 4 años</option>
+			<option value="7">Tasa por homicidio 5 a 9 años</option>
+			<option value="8">Tasa por homicidio 10 a 14 años</option>
+			<option value="9">Tasa por homicidio 15 a 17 años</option>
+			<option value="10">Tasa por homicidio 0 a 17 años</option>
+			<option value="11">Suicidio 5-9 años</option>
+			<option value="12">Suicidio 10-14 años</option>
+			<option value="13">Suicidio 15-17 años</option>
+			<option value="14">Tasa por suicidio 5-9 años</option>
+			<option value="15">Tasa por suicidio 10 a 14 años</option>
+			<option value="16">Tasa por suicidio 15 a 17 años</option>
+			<option value="17">Accidente de Tránsito 10 a 14 años</option>
+			<option value="18">Accidente de Tránsito 15 a 17 años</option>
+			<option value="19">Tasa por accidente de Tránsito 10 a 14 años</option>
+			<option value="20">Tasa por accidente de Tránsito 15 a 17 años</option>
+			<option value="21">Casos de Maltrato Infantil Comprobado</option>
+			<option value="22">Porcentajes de casos de Maltrato infantil presentados ante MP</option>
+			<option value="23">Menores infractores</option>
+			<option value="24">Presuntos Delincuentes del Fuero Común</option>
+			<option value="25">Presuntos responsables por delitos federales</option>		
+		</select>
+	  <button id="enviar">Enviar</button>
+        <div id="resultados"></div>
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        <script>  
+$('#enviar').on("click" , function(){
+				var api= "\""+"80be1759-3f80-4897-946a-1628082785a4"+"\"";
+				 var a= "Año";
+                getData(api,a);
+			});
+			$('#entidad').change(function(){
+				var api= "\""+"80be1759-3f80-4897-946a-1628082785a4"+"\"";
+				 var a= "Año";
+                llenar(api,a);
+			});		
+        </script>
+    </body>
+</html>  
